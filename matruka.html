@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Matruka — AI-powered smart farming platform by Ansh Joshi. Crop recommendations, disease detection, mandi prices, and government schemes for Indian farmers." />
+  <meta name="author" content="Ansh Joshi" />
+  <title>Matruka - Project | Ansh Joshi</title>
+
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="matruka.css">
+
+</head>
+
+<body>
+
+  <!-- Overlays -->
+  <div class="noise-overlay"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-bracket">[</span>ADJ's Portfolio<span class="nav-logo-bracket">]</span>
+      </a>
+      <div class="nav-links-right">
+        <a href="index.html#portfolio" class="nav-back">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Back to Portfolio
+        </a>
+        <a href="https://github.com/anshjoshi0/matruka" target="_blank" rel="noopener noreferrer" class="nav-btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.06-.02-2.08-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.76.08-.75.08-.75 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.32 3.52 1 .11-.79.42-1.32.76-1.63-2.67-.3-5.48-1.33-5.48-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23.96-.27 1.99-.4 3.01-.41 1.02.01 2.05.14 3.01.41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.49 5.91.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://matruka.vercel.app/" target="_blank" rel="noopener noreferrer" class="nav-btn btn-green">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Live Site
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="project-hero">
+    <div class="hero-grid-bg"></div>
+
+    <div class="container hero-content">
+
+      <!-- Left -->
+      <div class="hero-left">
+        <p class="hero-eyebrow">Project Case Study &nbsp;·&nbsp; 2025</p>
+
+        <h1 class="project-title">
+          <span class="title-solid">Matruka</span>
+          <span class="title-outline">AI Farm</span>
+        </h1>
+
+        <p class="hero-tagline">
+          An AI-powered bilingual platform built for Indian farmers — delivering crop intelligence, disease detection, mandi prices, and government scheme discovery in one place.
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="https://matruka.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-primary">
+            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            View Live Site
+          </a>
+          <a href="https://github.com/anshjoshi0/Matruka" target="_blank" rel="noopener noreferrer" class="cta-secondary">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.06-.02-2.08-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.76.08-.75.08-.75 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.32 3.52 1 .11-.79.42-1.32.76-1.63-2.67-.3-5.48-1.33-5.48-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23.96-.27 1.99-.4 3.01-.41 1.02.01 2.05.14 3.01.41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.49 5.91.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: meta card -->
+      <div class="hero-meta-card reveal">
+        <div class="meta-row">
+          <span class="meta-label">Project Type</span>
+          <span class="meta-value">Full-Stack Web Application</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Year</span>
+          <span class="meta-value">2025</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Solo Developer — Design, Frontend, Backend, AI Integration</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Deployed on</span>
+          <span class="meta-value">Vercel &nbsp;·&nbsp; matruka.vercel.app</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Languages</span>
+          <span class="meta-value">English &amp; Hindi (हिंदी)</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Stack</span>
+          <div class="meta-tags">
+            <span class="meta-tag">React</span>
+            <span class="meta-tag">Node.js</span>
+            <span class="meta-tag">MongoDB</span>
+            <span class="meta-tag">AI/ML APIs</span>
+            <span class="meta-tag">REST APIs</span>
+            <span class="meta-tag">Vercel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+
+  <!-- ===== OVERVIEW ===== -->
+  <section class="proj-section">
+    <div class="container">
+      <span class="section-label reveal">// 01. overview</span>
+      <h2 class="section-heading reveal reveal-d1">What is Matruka?</h2>
+
+      <div class="overview-grid">
+        <div class="overview-text">
+          <p class="highlight-text reveal">
+            Matruka is an AI-powered smart farming platform built specifically for Indian farmers, bridging the gap between cutting-edge agricultural technology and rural accessibility.
+          </p>
+          <p class="reveal reveal-d1">
+            The platform operates entirely in both English and Hindi, ensuring farmers who aren't comfortable in English can still access every feature. From real-time weather and crop recommendations to uploading soil profiles and detecting plant diseases through images — Matruka puts an agronomist in every farmer's pocket.
+          </p>
+          <p class="reveal reveal-d2">
+            Beyond AI features, Matruka aggregates real mandi (market) prices, locates the nearest mandis, and surfaces relevant government agricultural schemes — data that is often fragmented across dozens of portals and completely inaccessible to most farmers.
+          </p>
+          <p class="reveal reveal-d3">
+            Built as a solo full-stack project, every layer — UI design, backend architecture, AI integrations, API aggregation, and deployment — was designed and shipped by a single developer.
+          </p>
+        </div>
+
+        <div class="overview-stats">
+          <div class="stat-box reveal">
+            <span class="stat-box-num">6</span>
+            <span class="stat-box-label">Core AI Features</span>
+          </div>
+          <div class="stat-box reveal reveal-d1">
+            <span class="stat-box-num">2</span>
+            <span class="stat-box-label">Languages Supported</span>
+          </div>
+          <div class="stat-box reveal reveal-d2">
+            <span class="stat-box-num">1</span>
+            <span class="stat-box-label">Solo Developer</span>
+          </div>
+          <div class="stat-box reveal reveal-d3">
+            <span class="stat-box-num">∞</span>
+            <span class="stat-box-label">Farmers It Can Reach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+
+  <!-- ===== PROBLEM / SOLUTION ===== -->
+  <section class="proj-section">
+    <div class="container">
+      <span class="section-label reveal">// 02. problem &amp; solution</span>
+      <h2 class="section-heading reveal reveal-d1">Why Matruka Exists</h2>
+    </div>
+
+    <div class="container">
+      <div class="ps-grid">
+        <div class="ps-card ps-card-problem reveal">
+          <div class="ps-icon ps-icon-problem">⚠️</div>
+          <h3>The Problem</h3>
+          <ul class="ps-list">
+            <li>Indian farmers lack affordable access to expert agronomic guidance</li>
+            <li>Crop disease diagnosis requires visiting physical agriculture offices — slow and costly</li>
+            <li>Mandi prices are scattered across government portals with poor UX</li>
+            <li>Government schemes go unclaimed because farmers don't know they exist</li>
+            <li>Most agri-tech tools are English-only, excluding Hindi-speaking rural populations</li>
+            <li>Soil analysis data sits in labs — farmers can't act on it digitally</li>
+          </ul>
+        </div>
+
+        <div class="ps-card ps-card-solution reveal reveal-d2">
+          <div class="ps-icon ps-icon-solution">🌱</div>
+          <h3>The Matruka Solution</h3>
+          <ul class="ps-list">
+            <li>AI-driven crop recommendations based on real-time weather and soil data</li>
+            <li>Photo-based crop disease detection — point, shoot, get a diagnosis in seconds</li>
+            <li>Unified mandi price dashboard — all market data in one clean interface</li>
+            <li>Curated government schemes feed with eligibility filtering</li>
+            <li>Full bilingual support — seamlessly switch between English and Hindi</li>
+            <li>Soil profile upload and digital analysis with actionable crop suggestions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+
+  <!-- ===== FEATURES ===== -->
+  <section class="proj-section">
+    <div class="container">
+      <span class="section-label reveal">// 03. features</span>
+      <h2 class="section-heading reveal reveal-d1">What It Does</h2>
+
+      <div class="features-grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🌾</div>
+          <h3>AI Crop Recommendations</h3>
+          <p>Enter your location and the platform fetches live weather, cross-references soil conditions, and recommends the optimal crops for the current season using AI models.</p>
+          <span class="feature-tag">AI · Open Weather API · Soil Data</span>
+        </div>
+
+        <div class="feature-card reveal reveal-d1">
+          <div class="feature-icon">🔬</div>
+          <h3>Soil Profile Upload</h3>
+          <p>Farmers can photograph or upload their soil test documents. The system parses and analyzes the profile to suggest suitable crops and fertilizer strategies.</p>
+          <span class="feature-tag">Image Processing · AI Analysis</span>
+        </div>
+
+        <div class="feature-card reveal reveal-d2">
+          <div class="feature-icon">🦠</div>
+          <h3>Crop Disease Detection</h3>
+          <p>Upload a photo of a diseased crop leaf. The AI model identifies the disease, confidence level, and recommended treatment — all within seconds.</p>
+          <span class="feature-tag">Computer Vision · ML Model</span>
+        </div>
+
+        <div class="feature-card reveal reveal-d3">
+          <div class="feature-icon">📋</div>
+          <h3>Government Schemes</h3>
+          <p>A curated, regularly updated database of Central and State government agricultural schemes — surfaced based on the farmer's state and crop type.</p>
+          <span class="feature-tag">Data Aggregation · Official Govt Sites</span>
+        </div>
+
+        <div class="feature-card reveal reveal-d1">
+          <div class="feature-icon">📈</div>
+          <h3>Live Mandi Prices</h3>
+          <p>Real-time commodity prices from mandis across India, aggregated from government data sources. See price trends and find the best market for your produce.</p>
+          <span class="feature-tag">Live Data · Commodity Online</span>
+        </div>
+
+        <div class="feature-card reveal reveal-d2">
+          <div class="feature-icon">📍</div>
+          <h3>Mandi Near Me</h3>
+          <p>Geolocation-powered nearest mandi finder — shows distance, current prices, and operating hours so farmers can plan their market visits efficiently.</p>
+          <span class="feature-tag">Geolocation · Google Map</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+
+  <!-- ===== SCREENSHOTS (light section) ===== -->
+  <section class="proj-section-light">
+    <div class="container">
+      <span class="section-label-dark reveal">// 04. visual overview</span>
+      <h2 class="section-heading reveal reveal-d1" style="color:#111">The Interface</h2>
+      <p style="font-family:var(--font-mono);font-size:0.85rem;color:#666;margin-top:12px;font-weight:300;line-height:1.7;" class="reveal reveal-d2">
+        Designed for low-literacy users in rural India — large touch targets, bilingual labels, high-contrast imagery, and a clean card-based layout that works on budget Android phones.
+      </p>
+
+      <div class="screens-grid">
+        <div class="screen-card reveal">
+          <img src="https://images.pexels.com/photos/129574/pexels-photo-129574.jpeg?auto=compress&cs=tinysrgb&w=800" alt="AI Crop Recommendation screen" loading="lazy" />
+          <span class="screen-label">AI Crop Recommendations</span>
+        </div>
+        <div class="screen-card reveal reveal-d1">
+          <img src="https://images.pexels.com/photos/7944397/pexels-photo-7944397.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Soil profile upload screen" loading="lazy" />
+          <span class="screen-label">Soil Profile Upload</span>
+        </div>
+        <div class="screen-card reveal reveal-d2">
+          <img src="https://images.pexels.com/photos/7944396/pexels-photo-7944396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Disease detection screen" loading="lazy" />
+          <span class="screen-label">Disease Detection</span>
+        </div>
+        <div class="screen-card reveal reveal-d1">
+          <img src="https://images.pexels.com/photos/32975170/pexels-photo-32975170.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Government schemes screen" loading="lazy" />
+          <span class="screen-label">Government Schemes</span>
+        </div>
+        <div class="screen-card reveal reveal-d2">
+          <img src="https://images.pexels.com/photos/30898070/pexels-photo-30898070.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mandi prices screen" loading="lazy" />
+          <span class="screen-label">Live Mandi Prices</span>
+        </div>
+        <div class="screen-card reveal reveal-d3">
+          <img src="https://images.pexels.com/photos/5864750/pexels-photo-5864750.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mandi near me screen" loading="lazy" />
+          <span class="screen-label">Mandi Near Me</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECH STACK ===== -->
+  <section class="proj-section-light" style="padding-top:0">
+    <div class="container">
+      <span class="section-label-dark reveal">// 05. tech stack</span>
+      <h2 class="section-heading reveal reveal-d1" style="color:#111">Built With</h2>
+
+      <div class="tech-grid">
+        <div class="tech-card reveal">
+          <div class="tech-icon"><i class="devicon-css3-plain"></i></div>
+          <span class="tech-name">Vanilla Css</span>
+          <p class="tech-desc">Clean clutter free UI - minimal and clean. Supirior performance and creative freedom.</p>
+        </div>
+        <div class="tech-card reveal reveal-d1">
+          <div class="tech-icon"><i class="devicon-nodejs-plain colored"></i></div>
+          <span class="tech-name">Node.js</span>
+          <p class="tech-desc">Express server handling API proxying, AI calls, and data aggregation from external sources.</p>
+        </div>
+        <div class="tech-card reveal reveal-d2">
+          <div class="tech-icon"><i class="devicon-firebase-plain colored"></i></div>
+          <span class="tech-name">Firebase</span>
+          <p class="tech-desc">Flexible document storage for schemes, mandi records, and user session data.</p>
+        </div>
+        <div class="tech-card reveal reveal-d3">
+          <div class="tech-icon">🤖</div>
+          <span class="tech-name">AI / ML APIs</span>
+          <p class="tech-desc">Gemini 2.5 Flash vision models for disease detection; language models for crop advisory generation.</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon">🌦️</div>
+          <span class="tech-name">Open Weather API</span>
+          <p class="tech-desc">Real-time meteorological data powering location-aware crop recommendations.</p>
+        </div>
+        <div class="tech-card reveal reveal-d1">
+          <div class="tech-icon">📊</div>
+          <span class="tech-name">commodity Online</span>
+          <p class="tech-desc">A site which shows live crop prices of your city, town or village.</p>
+        </div>
+        <div class="tech-card reveal reveal-d2">
+          <div class="tech-icon"><i class="devicon-javascript-plain colored"></i></div>
+          <span class="tech-name">JavaScript (ES2022+)</span>
+          <p class="tech-desc">Modern async/await patterns, optional chaining, and module-based architecture throughout.</p>
+        </div>
+        <div class="tech-card reveal reveal-d3">
+          <div class="tech-icon">▲</div>
+          <span class="tech-name">Vercel</span>
+          <p class="tech-desc">Deployed with zero-config CI/CD — automatic preview deployments on every push.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+
+  <!-- ===== ARCHITECTURE ===== -->
+  <section class="proj-section">
+    <div class="container">
+      <span class="section-label reveal">// 06. architecture</span>
+      <h2 class="section-heading reveal reveal-d1">How It's Structured</h2>
+
+      <div class="arch-diagram reveal">
+        <div class="arch-layers">
+          <div class="arch-layer arch-layer-frontend">
+            <span class="arch-layer-badge">Frontend</span>
+            <div class="arch-layer-items">
+              <span class="arch-pill">Html/Css</span>
+              <span class="arch-pill">Bilingual Context (EN / हिं)</span>
+              <span class="arch-pill">Responsive UI</span>
+              <span class="arch-pill">Image Upload</span>
+              <span class="arch-pill">Geolocation API</span>
+            </div>
+          </div>
+          <div class="arch-arrow">↕</div>
+          <div class="arch-layer arch-layer-backend">
+            <span class="arch-layer-badge">Backend</span>
+            <div class="arch-layer-items">
+              <span class="arch-pill">Node.js / Express</span>
+              <span class="arch-pill">API Layer</span>
+              <span class="arch-pill">Firebase Auth</span>
+              <span class="arch-pill">Firebase Database</span>
+              <span class="arch-pill">File Handling</span>
+            </div>
+          </div>
+          <div class="arch-arrow">↕</div>
+          <div class="arch-layer arch-layer-ai">
+            <span class="arch-layer-badge" style="color:#7ab893">AI Layer</span>
+            <div class="arch-layer-items">
+              <span class="arch-pill">Gemini 2.5 flash</span>
+              <span class="arch-pill">Disease Vision Model</span>
+              <span class="arch-pill">Soil Analysis Engine</span>
+              <span class="arch-pill">Language Model (Bilingual)</span>
+            </div>
+          </div>
+          <div class="arch-arrow">↕</div>
+          <div class="arch-layer arch-layer-ext">
+            <span class="arch-layer-badge">External APIs</span>
+            <div class="arch-layer-items">
+              <span class="arch-pill">Open Weather API</span>
+              <span class="arch-pill">Maps / Geolocation</span>
+              <span class="arch-pill">Schemes Data Feed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+
+  <!-- ===== CHALLENGES ===== -->
+  <section class="proj-section">
+    <div class="container">
+      <span class="section-label reveal">// 07. challenges &amp; learnings</span>
+      <h2 class="section-heading reveal reveal-d1">What I Solved</h2>
+
+      <div class="challenges-list">
+
+        <div class="challenge-item reveal">
+          <span class="challenge-num">01</span>
+          <div class="challenge-problem">
+            <h4>Bilingual State Management</h4>
+            <p>Switching the entire application between English and Hindi — including dynamic AI responses — without losing component state or causing full page reloads.</p>
+          </div>
+          <div class="challenge-solution">
+            <h4>Solution</h4>
+            <p>Implemented a React Context with a language token passed as a parameter to every AI API call. The backend prompts the model to respond in the target language, so translations are semantic — not just string swaps.</p>
+          </div>
+        </div>
+
+        <div class="challenge-item reveal reveal-d1">
+          <span class="challenge-num">02</span>
+          <div class="challenge-problem">
+            <h4>Unreliable Government API Data</h4>
+            <p>India's mandi price APIs are inconsistently formatted, have frequent downtime, and return different schemas across states — making direct consumption impossible.</p>
+          </div>
+          <div class="challenge-solution">
+            <h4>Solution</h4>
+            <p>Built a normalization middleware layer that maps each state's API response to a unified schema with fallback caching. Stale data is shown with a timestamp so farmers know the recency.</p>
+          </div>
+        </div>
+
+        <div class="challenge-item reveal reveal-d2">
+          <span class="challenge-num">03</span>
+          <div class="challenge-problem">
+            <h4>AI Response Latency on Slow Connections</h4>
+            <p>Rural users on 2G/3G networks experience long loading times when AI endpoints process images or generate crop recommendations — leading to perceived app failure.</p>
+          </div>
+          <div class="challenge-solution">
+            <h4>Solution</h4>
+            <p>Added streaming responses for text-based AI outputs and progressive image loading. A skeleton UI with honest progress indicators keeps users informed and reduces abandonment.</p>
+          </div>
+        </div>
+
+        <div class="challenge-item reveal reveal-d3">
+          <span class="challenge-num">04</span>
+          <div class="challenge-problem">
+            <h4>Designing for Low-Literacy Users</h4>
+            <p>Many Indian farmers have limited reading proficiency. A text-heavy UI would create a barrier regardless of language support.</p>
+          </div>
+          <div class="challenge-solution">
+            <h4>Solution</h4>
+            <p>Prioritized icon-led navigation, large touch targets, color-coded results (green = healthy, red = disease), and audio-ready text structure so future TTS integration would be seamless.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <span class="cta-eyebrow reveal">// explore matruka</span>
+      <h2 class="cta-heading reveal reveal-d1">
+        See It <span class="outline">In Action.</span>
+      </h2>
+      <p class="cta-sub reveal reveal-d2">
+        The live site is deployed on Vercel. The source code is on GitHub.<br/>
+        Both links are right below.
+      </p>
+      <div class="cta-buttons reveal reveal-d3">
+        <a href="https://matruka.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Visit matruka.vercel.app
+        </a>
+        <a href="https://github.com/anshjoshi0/matruka" target="_blank" rel="noopener noreferrer" class="cta-btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.06-.02-2.08-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.76.08-.75.08-.75 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.32 3.52 1 .11-.79.42-1.32.76-1.63-2.67-.3-5.48-1.33-5.48-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23.96-.27 1.99-.4 3.01-.41 1.02.01 2.05.14 3.01.41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.49 5.91.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View Source on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="project-footer">
+    <div class="container footer-inner">
+      <span class="footer-text">Ansh Joshi &nbsp;·&nbsp; Full-Stack Developer &nbsp;·&nbsp; 2025</span>
+      <a href="index.html" class="footer-back">← Back to Portfolio</a>
+    </div>
+  </footer>
+
+   <script src="matruka.js"></script>
+</body>
+</html>
